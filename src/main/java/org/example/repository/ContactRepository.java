@@ -22,7 +22,7 @@ public class ContactRepository {
                 .anyMatch(c -> c.getName().equals(contact.getName()));
 
         if (exists) {
-            throw new ElementAlreadyExistsException("Contact name must be unique");
+            throw new ElementAlreadyExistsException("Contact with this name already exists");
         }
 
         contacts.add(contact);

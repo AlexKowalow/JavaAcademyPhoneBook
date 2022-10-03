@@ -23,7 +23,7 @@ public class PhoneBook {
             var contacts = contactRepository.getContacts();
 
             for (var c : contacts) {
-                bw.write(c.toString());
+                bw.write(c.toString() + "\n");
             }
         }
         catch (Exception e) {

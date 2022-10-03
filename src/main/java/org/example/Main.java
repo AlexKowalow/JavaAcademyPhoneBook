@@ -124,5 +124,8 @@ nazwa ani numer telefonu nie mogą być nullami ani pustymi Stringami ("").
         catch (Exception e) {
             logger.error(e.getMessage());
         }
+        finally {
+            phoneBook.writeDataToFile(filename);
+        }
     }
 }
