@@ -149,7 +149,7 @@ public class PhoneBookTest {
 
 
     @Test
-    public void createContact() throws InvalidArgumentsProvidedException, ElementAlreadyExistsException {
+    public void createContact() throws InvalidArgumentsProvidedException {
         var c1 = new Contact("aaaa", "+48 000 000 000");
         assertNotNull(c1);
     }

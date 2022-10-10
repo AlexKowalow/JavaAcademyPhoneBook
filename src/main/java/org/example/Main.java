@@ -44,7 +44,8 @@ nazwa ani numer telefonu nie mogą być nullami ani pustymi Stringami ("").
                 System.out.println("Find by name   2");
                 System.out.println("Find by number 3");
                 System.out.println("Remove contact 4");
-                System.out.println("Exit           5");
+                System.out.println("Get report     5");
+                System.out.println("Exit           6");
                 System.out.println("================");
                 System.out.print("\t> ");
 
@@ -105,6 +106,16 @@ nazwa ani numer telefonu nie mogą być nullami ani pustymi Stringami ("").
                         }
                     }
                     case 5 -> {
+                        System.out.print("Enter email to send report: ");
+                        String email = sc.nextLine();
+
+                        logger.debug("Sending report to email [ " + email + " ]...");
+
+                        phoneBook.sendReport(email);
+
+                        logger.debug("Sending report to email [ " + email + " ] - DONE");
+                    }
+                    case 6 -> {
                         logger.debug("Writing data to file [ " + filename + " ]...");
                         phoneBook.writeDataToFile(filename);
                         logger.debug("Writing data to file [ " + filename + " ] - DONE");
